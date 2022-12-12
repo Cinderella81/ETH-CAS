@@ -1,0 +1,49 @@
+import numpy as np
+import random as rd
+
+def setup(A):
+    for i in range (0,3):
+        for j in range (0,3):
+            A[i][j] = '.'
+
+def output(grid):
+    for i in range(0, 3):
+        for j in range(0, 3):
+            print(grid[i][j], end=" ")
+        print()
+
+def hasWon(TicTacToe, z):
+    result = False
+    diag1 = 0
+    diag2 = 0
+    for i in range (0,3):
+        if TicTacToe[i,i] == z:
+            diag1 += 1
+        if TicTacToe[i,2-i] == z:
+           diag2 +=1
+    if diag1 == 3 or diag2 == 3:
+        result = True
+    return result
+
+TicTacToe = np.empty((3,3),str)
+setup(TicTacToe)
+output(TicTacToe)
+
+for runde in range (0,5):
+    row_input = int(input("Row: "))
+    col_input = int(input("Column: "))
+    TicTacToe[row_input, col_input] = "X"
+    won = hasWon(TicTacToe,"X")
+    print(won)
+    
+    if won == False:
+        for i in range (0,9):
+            row = rd.randint(0,2)
+            col = rd.randint(0,2)
+            if TicTacToe[row,col] == ".":
+                TicTacToe[row,col] = "O"
+                break
+    output(TicTacToe)
+    if won == True or hasWon(TicTacToe, "0"):
+        print("Game over")
+        break
