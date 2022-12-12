@@ -1,0 +1,38 @@
+# ETH-CAS
+
+Beim Spiel Tic Tac Toe setzen zwei spielende Personen auf einem quadratischen Spielfeld
+der Grösse 3 × 3 abwechselnd ihr Zeichen (z.B. Kreuze und Kreise) in ein freies Feld
+(siehe Beispiel in Abbildung 3). Die Person, die als erste drei Zeichen in eine Zeile, Spalte
+oder Diagonale setzen kann, gewinnt.
+
+3.2 Aufgabenstellung
+Bei Ihrem Tic Tac Toe-Spiel sollen abwechselnd die beiden Zeichen X oder O in ein
+3 × 3-Spielbrett gesetzt werden. Sobald eine der beiden Zeichen eine Diagonale erreicht
+hat, soll das Spiel enden.
+So könnte das fertige Tic Tac Toe-Spiel aussehen:
+10
+S 1 2 3
+Z -------
+1 | O . X
+2 | O X X
+3 | . . O
+Zeile: 3
+Spalte: 1
+Game over. Spielerin 1 hat gewonnen!
+3.3 Zwischenschritte
+• Erstellen Sie ein 3 × 3-Spielfeld (siehe Boss Puzzle-Spiel im E.Tutorial®
+).
+• Schreiben Sie eine Funktion setup(), die alle Elemente des Spielfeldes mit einem
+Einheitszeichen (z.B. '.') beschreibt.
+• Schreiben Sie eine Funktion ausgabe(), die das Spielfeld in der Konsole ausgibt.
+• Schreiben Sie eine Benutzereingabe für die beiden Koordinaten des gewünschten
+Feldes.
+• Setzen Sie das Zeichen 'X' an der von der spielenden Person gewünschten Stelle.
+• Ermöglichen Sie mehrere Spielzüge. Wechseln Sie das Zeichen so, dass bei der
+nächsten Eingabe das Zeichen 'O' gesetzt wird.
+• Schreiben Sie eine Funktion hatGewonnen(), die auswertet, ob jemand eine
+Diagonale erreicht hat. Das Spiel soll in diesem Fall enden.
+3.4 Erweiterungen
+• Werten Sie auch drei Zeichen in einer Spalte oder einer Zeile aus und sorgen Sie
+dafür, dass auch dann das Spiel endet.
+• Der Spielgegner soll durch den Computer mittels Zufallsgenerator gespielt werden.
